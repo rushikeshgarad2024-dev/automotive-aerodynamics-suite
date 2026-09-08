@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><title>Automotive Aerodynamics & Airfoil Suite | Mechanical Engineering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="header-content">
+        <h1>🏎️ Automotive Aerodynamics & Airfoil Suite</h1>
+        <p>Vehicle Drag Power, Boundary Layer Flow & NACA 4-Digit Pressure Distribution Solver</p>
+      </div>
+      <div class="author-badge">Automotive & Aerospace • Rushikesh Garad</div>
+    </header>
+    <div class="main-layout">
+      <div class="control-panel">
+        <h3>Aerodynamic Parameters</h3>
+        <div class="form-group">
+          <label>Vehicle Speed (km/h): <span id="speedVal">120</span></label>
+          <input type="range" id="speedRange" min="20" max="250" value="120" step="5" />
+        </div>
+        <div class="form-group">
+          <label>Drag Coefficient ($C_d$): <span id="cdVal">0.28</span></label>
+          <input type="range" id="cdRange" min="0.15" max="0.60" value="0.28" step="0.01" />
+        </div>
+        <div class="form-group">
+          <label>Frontal Area ($A$ in m²): <span id="areaVal">2.2</span></label>
+          <input type="range" id="areaRange" min="1.0" max="4.5" value="2.2" step="0.1" />
+        </div>
+        <div class="results-card">
+          <h4>📊 Aerodynamic Telemetry</h4>
+          <div class="stat-row"><span>Total Aero Drag ($F_d$):</span> <strong id="dragForce">472.4 N</strong></div>
+          <div class="stat-row"><span>Power to Overcome Drag:</span> <strong id="dragPower">15.7 kW (21.1 hp)</strong></div>
+          <div class="stat-row"><span>Dynamic Pressure ($q$):</span> <strong id="dynPressure">680.6 Pa</strong></div>
+          <div class="stat-row"><span>Aero Efficiency Score:</span> <span class="badge-safe">OPTIMAL (91%)</span></div>
+        </div>
+      </div>
+      <div class="viewport-panel">
+        <div class="canvas-header"><span>Velocity Streamlines & Pressure Isobars around Vehicle Profile</span></div>
+        <canvas id="aeroCanvas" width="800" height="480"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="aero.js"></script>
+</body>
+</html>

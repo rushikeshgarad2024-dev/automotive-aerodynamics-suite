@@ -1,0 +1,10 @@
+﻿{
+  "name": "automotive-aerodynamics-suite",
+  "version": "1.0.0",
+  "description": "Vehicle Aerodynamic Drag & NACA Airfoil Pressure Coefficient Simulator for Automotive & Aerospace Engineering",
+  "main": "index.html",
+  "scripts": { "start": "npx serve ." },
+  "keywords": ["aerodynamics", "automotive-engineering", "airfoil", "naca", "drag-coefficient", "fluid-mechanics"],
+  "author": "Rushikesh Garad",
+  "license": "MIT"
+}
